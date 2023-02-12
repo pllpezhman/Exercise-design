@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?62868285');
+  src: url('../font/fontello.eot?62868285#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?62868285') format('woff2'),
+       url('../font/fontello.woff?62868285') format('woff'),
+       url('../font/fontello.ttf?62868285') format('truetype'),
+       url('../font/fontello.svg?62868285#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  width: 1em;
+  font-variant:normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+.icon-coffee-cup:before { content: '\e800'; } /* '' */
+.icon-star-empty:before { content: '\e801'; } /* '' */
+.icon-down-open:before { content: '\e802'; } /* '' */
+.icon-emo-sleep:before { content: '\e803'; } /* '' */
+.icon-mail:before { content: '\e804'; } /* '' */
+.icon-heart-empty:before { content: '\e805'; } /* '' */
+.icon-emo-wink2:before { content: '\e813'; } /* '' */
+.icon-instagram:before { content: '\f32d'; } /* '' */

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+ 
+
+    <title>Design</title>
+
+    <style>
+        @font-face {
+            font-family: 'fontello';
+            src: url('font/fontello.eot?62868285');
+            src: url('font/fontello.eot?62868285#iefix') format('embedded-opentype'),
+                url('font/fontello.woff2?62868285') format('woff2'),
+                url('font/fontello.woff?62868285') format('woff'),
+                url('font/fontello.ttf?62868285') format('truetype'),
+                url('font/fontello.svg?62868285#fontello') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        [class^="icon-"]:before,
+        [class*=" icon-"]:before {
+            font-family: "fontello";
+            font-style: normal;
+            font-weight: normal;
+            /* speak: none; */
+            width: 1em;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-coffee-cup:before {
+            content: '\e800';
+        }
+
+        .icon-star-empty:before {
+            content: '\e801';
+        }
+
+        .icon-down-open:before {
+            content: '\e802';
+        }
+
+        .icon-emo-sleep:before {
+            content: '\e803';
+        }
+
+        .icon-mail:before {
+            content: '\e804';
+        }
+
+        .icon-heart-empty:before {
+            content: '\e805';
+        }
+
+        .icon-emo-wink2:before {
+            content: '\e813';
+        }
+
+        .icon-instagram:before {
+            content: '\f32d';
+        }
+
+        /* header */
+
+        header {
+            width: 100%;
+            height: 600px;
+            background: url(img/proOil.jpg) center center/cover no-repeat;
+            position: relative;
+        }
+
+        header nav {
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            position: relative;
+            cursor: pointer;
+        }
+
+        header nav .logo img {
+            width: 40px;
+        }
+
+        nav .mainMenu>li {
+            float: left;
+            padding: 0 10px;
+            position: relative;
+
+        }
+
+        nav .mainMenu>li .subMenu {
+            width: 200px;
+            position: absolute;
+            top: 100%;
+            background-color: white;
+            color: black;
+            transition: 1s;
+            transform: translateY(-20px);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        nav .mainMenu>li:hover,
+        nav .mainMenu>li .subMenu>li:hover {
+            color: orange;
+            font-weight: bold;
+        }
+
+        nav .mainMenu>li:hover .subMenu {
+            opacity: .8;
+            visibility: visible;
+            transform: none;
+        }
+
+        nav .mainMenu>li .subMenu>li {
+            text-indent: 10px;
+            padding: 5px 0;
+            border-bottom: 1px solid gray;
+
+        }
+
+        nav ul.mainMenu>li.hasMega {
+            position: static;
+        }
+
+        ul.mainMenu>li .megaMenu {
+            width: 100%;
+            height: 400px;
+            background-color: aqua;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: translateY(-20px);
+
+            transition: 1s;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        ul.mainMenu>li.hasMega:hover .megaMenu {
+            opacity: .8;
+            visibility: visible;
+            transform: none;
+        }
+
+
+        header::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 25px solid transparent;
+            border-bottom: 25px solid white;
+            border-top: none;
+
+        }
+
+
+
+        header .headercontent {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        header .headercontent>h1 {
+            font-size: 100px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: 2px 5px 6px white;
+        }
+
+        header .headercontent>p {
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 1px 3px 5px white;
+        }
+
+        header .arrow {
+            font-family: "fontello";
+            width: 20px;
+            height: 20px;
+            display: block;
+            color: black;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            transition: 1s;
+        }
+
+        header .arrow:hover {
+            transform: translateX(-50%) rotate(360deg);
+            font-weight: bold;
+            font-size: larger;
+        }
+
+
+        .wellcome {
+            margin: 20px 0;
+            height: 400px;
+
+        }
+
+        .wellcome .row70 {
+            height: 400px;
+        }
+
+        .wellcome .row70 .col-1-2 .col-1-1:first-child {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wellcome .row70 .col-1-2:last-child {
+ 
+            height: 400px;
+            background-image: url(img/dan-schiumarini-459534-unsplash.jpg), url(img/jonathan-chen-199962-unsplash.jpg);
+
+            background-size: 70% auto, 75% auto;
+            background-repeat: no-repeat;
+            background-position: 100% 2%, 0 70%;
+        }
+
+        .gallery {
+            height: 400px;
+        }
+
+        .gallery::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 25px solid transparent;
+            border-top: 25px solid white;
+            border-bottom: none;
+
+        }
+
+        .gallery .content {
+            width: 25%;
+            height: 150px;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .gallery .content>div {
+            padding: 40px 15px;
+        }
+
+        .gallery .content>div:first-child {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .gallery .content>div:last-child {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .gallery .item1 {
+            background: url(img/bg.png) center center/cover no-repeat;
+        }
+
+        .gallery .item2 {
+            background: url(img/image-block-bg.jpg) center center/cover no-repeat;
+        }
+
+        .gallery .item3 {
+            background: url(img/csm_TSOE_FOTOKEM_H264.00_00_08_09.Still038_a52e2870c8.jpg) center center/cover no-repeat;
+        }
+
+        .gallery>[class*="item"] {
+            /* animation: move 1s ease-in-out 0s 1; */
+            transition: 1s;
+        }
+
+        .gallery>[class*="item"]:hover {
+            /* animation: move 1s ease-in-out infinite; */
+            transform: scale(1.02);
+        }
+        
+
+        /* service */
+
+        .service {
+            height: 300px;
+            margin: 30px 0;
+            /* background-color: aqua; */
+        }
+
+        .service .height25 {
+            /* top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+             */
+
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .service .height75 {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .service .height75 .col-1-4>div {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+
+        .service .height75 .col-1-4>h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+
+        .service .height75 .col-1-4>p {
+            font-family: 'Times New Roman', Times, serif;
+            /* text-align: justify; */
+        }
+
+        /* reservation */
+        .reservation {
+            height: 300px;
+            background: url(img/robin-sommer-559996-unsplash.jpg) center center/cover no-repeat;
+        }
+
+        .reservation::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 25px solid transparent;
+            border-top: 25px solid white;
+            border-bottom: none;
+        }
+
+        .reservation .content {
+            min-width: 25%;
+            background-color: white;
+            padding: 25px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .reservation .content>h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        /* view menu */
+
+        section.viewmenu {
+            height: 400px;
+            margin: 30px 0;
+
+        }
+
+        .viewmenu .imgcontent {
+            background: url(img/rob-lambert-64186-unsplash.jpg) center center/cover no-repeat;
+        }
+
+        .viewmenu .imgcontent .contentmenu {
+            min-width: 50%;
+            min-height: 50%;
+            background-color: white;
+            opacity: .5;
+            border: 1px solid #000;
+            outline: 3px solid rgba(0, 0, 0, .5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            transition: 1s;
+        }
+
+        .viewmenu .imgcontent .contentmenu:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+            box-shadow: 2px 4px 5px white;
+        }
+
+        .viewmenu .imgcontent .contentmenu>div.row {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .viewmenu .dishes {
+            text-align: center;
+            top: 30%;
+        }
+
+        .viewmenu .dishes .height33 .view {
+            width: 50%;
+            margin-left: 25%;
+            padding: 10px 0;
+            border: 2px solid gray;
+            border-radius: 5px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        .viewmenu .dishes .height33 .view:hover {
+            background-color: black;
+            opacity: .7;
+            color: white;
+        }
+
+        .location {
+            height: 400px;
+            background: url(img/patrick-hendry-532214-unsplash.jpg) center center/cover no-repeat;
+        }
+
+        .location .content {
+            min-width: 40%;
+            background-color: white;
+            text-align: center;
+        }
+
+        .location .content .row70 {
+            padding: 10px 0;
+        }
+
+        .location .content .row70>h1 {
+            border-bottom: 1px solid gray;
+        }
+
+        .location .content>*:hover {
+            font-size: larger;
+        }
+
+        /* footer */
+
+        footer {
+            height: 400px;
+            background-color: #3d3d3d;
+        }
+
+        /* footer Content */
+        footer .content {
+            text-align: center;
+        }
+
+        footer .content>.row50>* {
+            padding: 10px 0;
+        }
+
+        footer .content .row50>h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-bottom: 1px solid gray;
+        }
+
+
+        footer .content .row50>.socialmedia {
+            height: 50px;
+
+        }
+
+        footer .content .row50>.socialmedia ul {
+            text-align: center;
+            line-height: 30px;
+        }
+
+
+
+        footer .content .row50>.socialmedia ul>li>.imgsocial {
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url(img/instagram.png);
+            background-position: center center;
+            background-size: 24px 24px;
+        }
+
+        footer .content .row50>.socialmedia ul>li>.imgsocial::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px ;
+            background-color: black;
+            opacity: .5;
+        }
+
+        footer .content .row50>.socialmedia ul>li:hover .imgsocial::before{
+            opacity: 0;
+        }
+
+
+        /* footer End */
+        footer .end {
+            background-color: #252525;
+        }
+
+        footer .end::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            border: 25px solid transparent;
+            border-bottom: 25px solid black;
+            border-top: none;
+        }
+
+        footer .end>.arrow {
+            font-family: "fontello";
+            width: 20px;
+            height: 20px;
+            display: block;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%) rotate(180deg);
+            text-align: center;
+            transition: 1s;
+        }
+
+        footer .end>.arrow:hover {
+            transform: translate(-50%, -100%) rotate(540deg);
+            font-weight: bold;
+        }
+
+
+        footer .end .row70>.col-1-2 {
+            padding-top: 30px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="row">
+        <!-- navigation -->
+        <nav class="row70">
+            <div class="logo floatleft">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <ul class="mainMenu floatright">
+                <li>HOME
+                    <ul class="subMenu">
+                        <li>submenu-item1</li>
+                        <li>submenu-item2</li>
+                        <li>submenu-item3</li>
+                        <li>submenu-item4</li>
+                    </ul>
+                </li>
+                <li class="hasMega">SHOP
+                    <div class="megaMenu"></div>
+                </li>
+                <li>BLOG</li>
+                <li>CONTACT US</li>
+                <li>ABOUT US</li>
+                <li><span></span></li>
+            </ul>
+        </nav>
+        <section class="headercontent poa">
+            <h1>Tasty</h1>
+            <p> HEALTHY & NATURAL FOOD</p>
+        </section>
+        <div class="arrow poa icon-down-open"></div>
+    </header>
+
+    <div class="wellcome row">
+        <div class="row70">
+            <div class="col-1-2">
+
+                <div class="contentwelcome">
+                    <h1>WELCOME!</h1>
+                    <div>
+                        <span>THE</span>
+                        <h1 style="display: inline-block;
+                        ">GOURMET</h1>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel eaque facere error similique
+                        dolorem
+                        sapiente unde accusamus quisquam magni ad!
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-1-2 fullheight"></div>
+        </div>
+    </div>
+    <section class="gallery row por">
+        <div class="content poa">
+            <div>
+                <h1>rodpa</h1>
+                <h1>GALLERY</h1>
+            </div>
+
+        </div>
+        <div class="col-1-3 item1 fullheight"></div>
+        <div class="col-1-3 item2 fullheight"></div>
+        <div class="col-1-3 item3 fullheight"></div>
+    </section>
+
+    <section class="service row">
+        <div class="row70">
+            <div class="row height25">
+                <h1>main</h1>
+                <h1>SERVICE</h1>
+            </div>
+            <div class="row height75">
+                <div class="col-1-4 fulheight ">
+                    <div class="icon-coffee-cup"></div>
+                    <h1>BREAKFAST</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit amet</p>
+                </div>
+                <div class="col-1-4 fulheight ">
+                    <div class="icon-coffee-cup"></div>
+                    <h1>LUNCH</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit amet</p>
+                </div>
+                <div class="col-1-4 fulheight ">
+                    <div class="icon-coffee-cup"></div>
+                    <h1>DINNER</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit amet</p>
+                </div>
+                <div class="col-1-4 fulheight ">
+                    <div class="icon-coffee-cup"></div>
+                    <h1>CUSTOM</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit amet</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="reservation row por">
+        <div class="content poa">
+            <h1>moka</h1>
+            <h1>RESERVATION</h1>
+        </div>
+    </section>
+
+    <section class="row viewmenu">
+        <div class="row70 fullheight">
+            <div class="col-1-2 fullheight imgcontent por">
+                <div class="contentmenu poa">
+                    <div class="row poa">
+                        <h1>our</h1>
+                        <h1>MENU</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-2 fullheight por">
+                <div class="row dishes halfheight poa">
+                    <div class="height33">
+                        <h1>Delidous</h1>
+                        <h1>DISHES</h1>
+                    </div>
+
+                    <div class="height33">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, quod. Vitae id
+                            praesentium non. Sint?</p>
+                    </div>
+
+                    <div class="height33">
+                        <div class="view">
+                            <p>view full menu</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="location row por">
+        <div class="content poa center">
+            <div class="row70">
+                <h1>LOCATION</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolorum laborum nesciunt sint
+                    delectus possimus.</p>
+            </div>
+            <div class="row70">
+                <h1>HOUSE</h1>
+                <p>phone : 0912xxxxxxx</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, earum.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="row">
+        <div class="content row50 height80">
+            <div class="row50">
+                <h1>GOURMET</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusamus corrupti architecto
+                    voluptate! Pariatur, numquam!</p>
+                <h3>NEWSLETTER</h3>
+                <div class="row">
+                    <form action="post">
+                        <input type="text" placeholder="Your Email Address">
+                        <button onclick="return false;">
+                            ..
+                        </button>
+                    </form>
+                </div>
+                <div class="row50 socialmedia">
+                    <ul class="col-1-1 fullheight">
+                        <li class="col-1-4 fullheight por">
+                            <div class="imgsocial poa"></div>
+                        </li>
+                        <li class="col-1-4 fullheight por">
+                            <div class="imgsocial poa"></div>
+                        </li>
+                        <li class="col-1-4 fullheight por">
+                            <div class="imgsocial poa"></div>
+                        </li>
+                        <li class="col-1-4 fullheight por">
+                            <div class="imgsocial poa"></div>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="end row height20 por">
+            <div class="arrow icon-down-open poa"></div>
+            <div class="row70">
+                <div class="col-1-2">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    </footer>
+
+
+</body>
+
+</html>
